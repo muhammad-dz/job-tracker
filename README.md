@@ -1,8 +1,20 @@
 # Job Tracker — CV Match Scoring Tool
 
+[![CI](https://github.com/muhammad-dz/job-tracker/actions/workflows/ci.yml/badge.svg)](https://github.com/muhammad-dz/job-tracker/actions/workflows/ci.yml)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/React-20232A?logo=react&logoColor=61DAFB)
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=nodedotjs&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?logo=mysql&logoColor=white)
+
 A full-stack tool that automatically scores job postings against your CV
 skills, so you can prioritise applications by genuine fit rather than
 guesswork.
+
+<!-- Once deployed, uncomment and add your link:
+**Live demo:** https://your-demo-url.example
+-->
+
+![Job Tracker screenshot — tracked jobs sorted by match score, with matched and missing skills](docs/screenshot.png)
 
 ## Why I built this
 
@@ -17,6 +29,8 @@ skills, showing exactly which skills matched and which are missing.
 - **Backend:** Node.js, Express, TypeScript, MySQL (via `mysql2`)
 - **Frontend:** React, TypeScript, Vite
 - **Testing:** Jest (backend scoring logic)
+- **CI:** GitHub Actions — type-checks and tests the backend and builds the
+  frontend on every push and pull request
 
 ## How the scoring works
 
@@ -123,3 +137,6 @@ case-insensitivity, substring false-positives (e.g. "java" vs
 cd backend
 npm test
 ```
+
+The same tests run automatically in GitHub Actions on every push
+(see `.github/workflows/ci.yml`).
